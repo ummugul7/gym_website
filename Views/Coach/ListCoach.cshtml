@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Coach>
+
+<h3>@TempData["Mesaj"]</h3>
+<h2>Coach List</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Speciality</th>
+            <th>Experience</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coach in Model)
+        {
+            <tr>
+                <td>@coach.member.Email</td>
+                <td>@coach.member.UserName</td>
+                <td>@coach.speciality</td>
+                <td>@coach.experience years</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@coach.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@coach.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

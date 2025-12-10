@@ -440,3 +440,4 @@ C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dl
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\proje.sourcelink.json

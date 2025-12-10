@@ -24,17 +24,17 @@ namespace proje.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<Uye> _signInManager;
-        private readonly UserManager<Uye> _userManager;
-        private readonly IUserStore<Uye> _userStore;
-        private readonly IUserEmailStore<Uye> _emailStore;
+        private readonly SignInManager<Member> _signInManager;
+        private readonly UserManager<Member> _userManager;
+        private readonly IUserStore<Member> _userStore;
+        private readonly IUserEmailStore<Member> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<Uye> userManager,
-            IUserStore<Uye> userStore,
-            SignInManager<Uye> signInManager,
+            UserManager<Member> userManager,
+            IUserStore<Member> userStore,
+            SignInManager<Member> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -76,9 +76,9 @@ namespace proje.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             /// 
-            public int kilo { get; set; }
+            public int weight { get; set; }
 
-            public int boy { get; set; }
+            public int length { get; set; }
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -118,8 +118,8 @@ namespace proje.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-                user.kilo = Input.kilo;
-                user.boy = Input.boy;
+                user.weight = Input.weight;
+                user.length = Input.length;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -162,27 +162,27 @@ namespace proje.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private Uye CreateUser()
+        private Member CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<Uye>();
+                return Activator.CreateInstance<Member>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(Uye)}'. " +
-                    $"Ensure that '{nameof(Uye)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(Member)}'. " +
+                    $"Ensure that '{nameof(Member)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<Uye> GetEmailStore()
+        private IUserEmailStore<Member> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<Uye>)_userStore;
+            return (IUserEmailStore<Member>)_userStore;
         }
     }
 }

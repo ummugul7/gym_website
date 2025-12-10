@@ -11,7 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<Uye>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<Member>(options => options.SignIn.RequireConfirmedAccount = false)
      .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();

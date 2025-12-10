@@ -159,7 +159,33 @@ namespace proje.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("proje.Models.Uye", b =>
+            modelBuilder.Entity("proje.Models.Coach", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("experience")
+                        .HasColumnType("int");
+
+                    b.Property<string>("speciality")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Egitmenler");
+                });
+
+            modelBuilder.Entity("proje.Models.Member", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -211,10 +237,10 @@ namespace proje.Data.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<int>("boy")
+                    b.Property<int>("length")
                         .HasColumnType("int");
 
-                    b.Property<int>("kilo")
+                    b.Property<int>("weight")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -241,7 +267,7 @@ namespace proje.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("proje.Models.Uye", null)
+                    b.HasOne("proje.Models.Member", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -250,7 +276,7 @@ namespace proje.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("proje.Models.Uye", null)
+                    b.HasOne("proje.Models.Member", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -265,7 +291,7 @@ namespace proje.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("proje.Models.Uye", null)
+                    b.HasOne("proje.Models.Member", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -274,11 +300,22 @@ namespace proje.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("proje.Models.Uye", null)
+                    b.HasOne("proje.Models.Member", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("proje.Models.Coach", b =>
+                {
+                    b.HasOne("proje.Models.Member", "member")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("member");
                 });
 #pragma warning restore 612, 618
         }

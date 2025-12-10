@@ -60,6 +60,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RDS/Desktop/proje/Views/Coach/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RDS/Desktop/proje/Views/Coach/ListCoach.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hcTGlzdENvYWNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RDS/Desktop/proje/Views/Coach/Record.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hcUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RDS/Desktop/proje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
