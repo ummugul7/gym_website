@@ -3,26 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\RDS\\Desktop\\proje\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\RDS\\Desktop\\proje\\Migrations\\20251211170127_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251211170127_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\coach\\listcoach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\coach\\listcoach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/sporsalonu/True/SqlTable/dbo.Egitmenler.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\coachviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\coachviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/sporsalonu/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,78 +30,71 @@
       "DocumentGroups": [
         {
           "DockedHeight": 244,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20251211170127_create.cs",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Migrations\\20251211170127_create.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251211170127_create.cs",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Migrations\\20251211170127_create.cs",
+              "RelativeToolTip": "Migrations\\20251211170127_create.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:01:27.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListCoach.cshtml",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Coach\\ListCoach.cshtml",
-              "RelativeDocumentMoniker": "Views\\Coach\\ListCoach.cshtml",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Coach\\ListCoach.cshtml",
-              "RelativeToolTip": "Views\\Coach\\ListCoach.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-10T16:16:40.742Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T17:00:56.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Egitmenler [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/sporsalonu/True/SqlTable/dbo.Egitmenler.sql",
-              "ToolTip": "dbo.Egitmenler [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-10T16:16:07.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Coach.cs",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Coach.cs",
-              "RelativeDocumentMoniker": "Models\\Coach.cs",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Coach.cs",
-              "RelativeToolTip": "Models\\Coach.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T16:15:43.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.AspNetUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/sporsalonu/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-10T16:14:36.444Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T17:00:53.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CoachViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\CoachViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\CoachViewModel.cs",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Models\\CoachViewModel.cs",
-              "RelativeToolTip": "Models\\CoachViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T16:10:06.673Z",
+              "WhenOpened": "2025-12-11T17:00:49.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CoachController.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
               "RelativeDocumentMoniker": "Controllers\\CoachController.cs",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
               "RelativeToolTip": "Controllers\\CoachController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAIA0wHkAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAmwIUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T16:08:52.343Z",
+              "WhenOpened": "2025-12-11T17:00:18.569Z",
               "EditorCaption": ""
             }
           ]

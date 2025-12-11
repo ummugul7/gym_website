@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.Build.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using proje.Data;
@@ -43,15 +44,17 @@ namespace proje.Controllers
                 {
                     await UserManager.AddToRoleAsync(user, "Egitmen"); 
 
-                    var egitmen = new Coach
+                    var coach = new Coach
                     {
                         UserId = user.Id,
                         speciality = model.speciality,
                         experience = model.experience
                     };
 
-                    dbContext.Egitmenler.Add(egitmen);
-                    await dbContext.SaveChangesAsync(); 
+                    dbContext.Coach.Add(coach);
+                    await dbContext.SaveChangesAsync();
+
+                   // CreateWeeklyAppointments(coach.Id);
 
                     TempData["Mesaj"] = "Eğitmen başarıyla kaydedildi.";
                     return RedirectToAction("Index" ,"Home"); 
@@ -71,7 +74,7 @@ namespace proje.Controllers
 
         public IActionResult ListCoach()
         {
-            var coaches = dbContext.Egitmenler
+            var coaches = dbContext.Coach
           .Include(c => c.member)
           .ToList();
 
@@ -79,13 +82,13 @@ namespace proje.Controllers
         }
         public async Task<IActionResult> Delete(int id)
         {
-            var coach = dbContext.Egitmenler.Find(id);
+            var coach = dbContext.Coach.Find(id);
 
             if (coach != null)
             {
                 string userId = coach.UserId;
 
-                dbContext.Egitmenler.Remove(coach);
+                dbContext.Coach.Remove(coach);
                 await dbContext.SaveChangesAsync();
 
                 var member = await UserManager.FindByIdAsync(userId);
@@ -128,7 +131,7 @@ namespace proje.Controllers
              
 
 
-            var coach = dbContext.Egitmenler.Include(c => c.member).FirstOrDefault(c => c.Id == id);
+            var coach = dbContext.Coach.Include(c => c.member).FirstOrDefault(c => c.Id == id);
 
             coach.speciality = coachView.speciality;
             coach.experience = coachView.experience;
@@ -141,5 +144,33 @@ namespace proje.Controllers
             return RedirectToAction("ListCoach");
         }
 
+
+
+       /*  private void CreateWeeklyAppointments(int coachId)
+        {
+            var startDate = DateTime.Today;
+            var appointments = new List<Appointment>();
+
+            for (int day = 0; day < 7; day++)
+            {
+                var date = startDate.AddDays(day);
+
+                // Her gün için 9:00 - 18:00 arası saatlik slotlar
+                for (int hour = 9; hour <= 17; hour++)
+                {
+                    appointments.Add(new Appointment
+                    {
+                        Date = date,
+                        Time = new TimeSpan(hour, 0, 0),
+                        CoachId = coachId,
+                        IsBooked = false,
+                        MemberId = null
+                    });
+                }
+            }
+
+            dbContext.Appointments.AddRange(appointments);
+            dbContext.SaveChanges();
+        } */
     }
 }

@@ -11,7 +11,7 @@ namespace proje.Data
         {
         }
 
-        public DbSet<Coach> Egitmenler { get; set; }
+        public DbSet<Coach> Coach { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

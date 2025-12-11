@@ -1,19 +1,29 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using proje.Data;
+using proje.Models;
 
 namespace proje.Controllers
 {
     public class MemberController : Controller
     {
-        [Authorize(Roles = "Uye")]
-        public IActionResult Appointment()
+        private readonly ApplicationDbContext dbContext;
+
+        public MemberController( ApplicationDbContext context)
         {
-            return View();
+       
+            dbContext = context;
         }
+
+     
 
         public IActionResult Myİnformation()
         {
             return View();
         }
+
+    
     }
 }

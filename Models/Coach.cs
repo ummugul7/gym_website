@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace proje.Models
 {
+    [Table("Egitmenler")]
     public class Coach
     {
-        public int Id { get; set; }
-
-        
+        public int Id { get; set; } 
         public string UserId { get; set; }
 
         [Required]
