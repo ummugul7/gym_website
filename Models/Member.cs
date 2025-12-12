@@ -6,8 +6,9 @@ namespace proje.Models
     {
         public int length {  get; set; }
 
-        public int weight { get; set; } 
+        public int weight { get; set; }
 
+        public ICollection<Appointment> Appointments { get; set; }
 
     }
 }

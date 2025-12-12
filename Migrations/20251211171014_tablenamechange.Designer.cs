@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using proje.Data;
 
@@ -11,9 +12,11 @@ using proje.Data;
 namespace proje.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251211171014_tablenamechange")]
+    partial class tablenamechange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -157,38 +160,6 @@ namespace proje.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("proje.Models.Appointment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CoachId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsBooked")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("MemberId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<TimeSpan>("Time")
-                        .HasColumnType("time");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CoachId");
-
-                    b.HasIndex("MemberId");
-
-                    b.ToTable("Appointment");
                 });
 
             modelBuilder.Entity("proje.Models.Coach", b =>
@@ -371,19 +342,6 @@ namespace proje.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("proje.Models.Appointment", b =>
-                {
-                    b.HasOne("proje.Models.Coach", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("CoachId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("proje.Models.Member", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("MemberId");
-                });
-
             modelBuilder.Entity("proje.Models.Coach", b =>
                 {
                     b.HasOne("proje.Models.Member", "member")
@@ -393,16 +351,6 @@ namespace proje.Migrations
                         .IsRequired();
 
                     b.Navigation("member");
-                });
-
-            modelBuilder.Entity("proje.Models.Coach", b =>
-                {
-                    b.Navigation("Appointments");
-                });
-
-            modelBuilder.Entity("proje.Models.Member", b =>
-                {
-                    b.Navigation("Appointments");
                 });
 #pragma warning restore 612, 618
         }

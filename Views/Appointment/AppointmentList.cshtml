@@ -1,0 +1,42 @@
+﻿@model IEnumerable<proje.Models.AppointmentGroupVM>
+
+
+
+<h2>@TempData["Mesaj"]</h2>
+
+<h1>Appointment List</h1>
+
+<table class="table"> 
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Times</th>
+            <th>Select</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var day in Model)
+        {
+            <tr>
+                <td>@day.Date.ToShortDateString()</td>
+
+
+                <td>
+                    @foreach (var t in day.Times)
+                    {
+                        <a asp-action="AppointmentBook"
+                           asp-route-id="@t.AppointmentId"
+                           class="btn btn-sm btn-success m-1">
+                            @t.Time.ToString(@"hh\:mm")
+                        </a>
+                    }
+                </td>
+
+                
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -80,6 +80,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RDS/Desktop/proje/Views/Appointment/Appointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RDS/Desktop/proje/Views/Appointment/AppointmentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQXBwb2ludG1lbnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RDS/Desktop/proje/Views/Appointment/AppointmentSelectCoach.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQXBwb2ludG1lbnRTZWxlY3RDb2FjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RDS/Desktop/proje/Views/Coach/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

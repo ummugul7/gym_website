@@ -10,14 +10,13 @@ namespace proje.Data
             : base(options)
         {
         }
-
         public DbSet<Coach> Coach { get; set; }
+        public DbSet<Appointment> Appointment { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            // Coach - Member ilişkisi
             builder.Entity<Coach>()
                 .HasOne(c => c.member)
                 .WithMany()

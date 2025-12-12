@@ -1,7 +1,8 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using proje.Models;
+using System.Diagnostics;
+using System.Security.Claims;
 
 namespace proje.Controllers
 {
@@ -16,10 +17,11 @@ namespace proje.Controllers
 
         public IActionResult Index()
         {
+           
             return View();
         }
 
-        [Authorize(Roles ="Uye")]
+        [Authorize(Roles = "Member")]
         public IActionResult Privacy()
         {
             return View();

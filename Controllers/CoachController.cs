@@ -42,7 +42,7 @@ namespace proje.Controllers
 
                 if (result.Succeeded)  
                 {
-                    await UserManager.AddToRoleAsync(user, "Egitmen"); 
+                    await UserManager.AddToRoleAsync(user, "Coach"); 
 
                     var coach = new Coach
                     {
@@ -54,7 +54,7 @@ namespace proje.Controllers
                     dbContext.Coach.Add(coach);
                     await dbContext.SaveChangesAsync();
 
-                   // CreateWeeklyAppointments(coach.Id);
+                    CreateWeeklyAppointments(coach.Id);
 
                     TempData["Mesaj"] = "Eğitmen başarıyla kaydedildi.";
                     return RedirectToAction("Index" ,"Home"); 
@@ -106,6 +106,32 @@ namespace proje.Controllers
             return RedirectToAction("ListCoach");
         }
 
+        private void CreateWeeklyAppointments(int coachId)
+        {
+            var startDate = DateTime.Today;
+            var appointments = new List<Appointment>();
+
+            for (int day = 0; day < 7; day++)
+            {
+                var date = startDate.AddDays(day);
+
+                // Her gün için 9:00 - 18:00 arası saatlik slotlar
+                for (int hour = 9; hour <= 17; hour++)
+                {
+                    appointments.Add(new Appointment
+                    {
+                        Date = date,
+                        Time = new TimeSpan(hour, 0, 0),
+                        CoachId = coachId,
+                        IsBooked = false,
+                        MemberId = null
+                    });
+                }
+            }
+
+            dbContext.Appointment.AddRange(appointments);
+            dbContext.SaveChanges();
+        }
 
         public IActionResult Edit(int id)
         {
@@ -146,31 +172,6 @@ namespace proje.Controllers
 
 
 
-       /*  private void CreateWeeklyAppointments(int coachId)
-        {
-            var startDate = DateTime.Today;
-            var appointments = new List<Appointment>();
-
-            for (int day = 0; day < 7; day++)
-            {
-                var date = startDate.AddDays(day);
-
-                // Her gün için 9:00 - 18:00 arası saatlik slotlar
-                for (int hour = 9; hour <= 17; hour++)
-                {
-                    appointments.Add(new Appointment
-                    {
-                        Date = date,
-                        Time = new TimeSpan(hour, 0, 0),
-                        CoachId = coachId,
-                        IsBooked = false,
-                        MemberId = null
-                    });
-                }
-            }
-
-            dbContext.Appointments.AddRange(appointments);
-            dbContext.SaveChanges();
-        } */
+       
     }
 }

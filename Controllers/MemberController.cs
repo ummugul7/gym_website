@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using proje.Data;
 using proje.Models;
+using System.Security.Claims;
 
 namespace proje.Controllers
 {
@@ -17,11 +18,11 @@ namespace proje.Controllers
             dbContext = context;
         }
 
-     
-
         public IActionResult Myİnformation()
         {
-            return View();
+            string memberId = User.FindFirst(ClaimTypes.NameIdentifier).Value; // anlık olarak sistemde login olan kişinin idsini gönderir 
+            var memberAppointmentList = dbContext.Appointment.Where(x=>x.MemberId == memberId && x.Date >= DateTime.Now).GroupBy(x => x.Date.Date).ToList();
+            return View("PersonalData",memberAppointmentList);
         }
 
     
