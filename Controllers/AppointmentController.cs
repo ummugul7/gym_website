@@ -67,7 +67,7 @@ namespace proje.Controllers
 
             TempData["Mesaj"] = "Appointment successfull";
 
-            return RedirectToAction("AppointmentList");
+            return RedirectToAction("AppointmentList", new { id = appointment.CoachId }); 
         }
 
         public IActionResult Index()
