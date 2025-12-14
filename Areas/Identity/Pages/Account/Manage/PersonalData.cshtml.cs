@@ -45,5 +45,8 @@ namespace proje.Areas.Identity.Pages.Account.Manage
 
             return Page();
         }
+
+
+
     }
 }

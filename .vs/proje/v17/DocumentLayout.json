@@ -3,31 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\RDS\\Desktop\\proje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\appointment\\appointmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\appointment\\appointmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\member\\my\u0130nformation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\member\\my\u0130nformation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\coach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\personaldata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/gym/True/SqlTable/dbo.Appointment.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\coach\\record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -46,6 +75,110 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T19:09:02.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:55:44.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:58:49.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:55:45.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:48:46.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "My\u0130nformation.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Member\\My\u0130nformation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Member\\My\u0130nformation.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Member\\My\u0130nformation.cshtml",
+              "RelativeToolTip": "Views\\Member\\My\u0130nformation.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwDAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:48:13.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppointmentList.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Appointment\\AppointmentList.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointment\\AppointmentList.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Appointment\\AppointmentList.cshtml",
+              "RelativeToolTip": "Views\\Appointment\\AppointmentList.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T18:45:03.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Models\\Member.cs",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Member.cs",
+              "RelativeToolTip": "Models\\Member.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T18:22:50.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Coach.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Coach.cs",
               "RelativeDocumentMoniker": "Models\\Coach.cs",
@@ -58,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -66,61 +199,50 @@
               "RelativeToolTip": "Models\\Appointment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T18:00:31.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T18:00:31.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Appointment [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/gym/True/SqlTable/dbo.Appointment.sql",
-              "ToolTip": "dbo.Appointment [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-14T17:55:07.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "PersonalData.cshtml",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-14T17:52:45.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MemberController.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\MemberController.cs",
               "RelativeToolTip": "Controllers\\MemberController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T17:52:21.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\AppointmentController.cs",
               "RelativeToolTip": "Controllers\\AppointmentController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T17:51:56.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "Record.cshtml",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Coach\\Record.cshtml",
               "RelativeDocumentMoniker": "Views\\Coach\\Record.cshtml",
@@ -128,18 +250,17 @@
               "RelativeToolTip": "Views\\Coach\\Record.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-14T09:46:38.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:46:38.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "CoachController.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
               "RelativeDocumentMoniker": "Controllers\\CoachController.cs",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
               "RelativeToolTip": "Controllers\\CoachController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAcwIgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T09:45:01.751Z",
               "EditorCaption": ""

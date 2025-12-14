@@ -1,17 +1,15 @@
-﻿@page
-@model PersonalDataModel
+﻿@model List<Appointment>
+
 @{
-    ViewData["Title"] = "Personal Data";
-    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+    ViewData["Title"] = "My Appointments";
 }
 
 <div class="row justify-content-center mt-4">
     <div class="col-lg-10">
-
         <div class="p-4 bg-light rounded shadow-sm">
             <h3 class="h4 mb-4 pb-2 border-bottom text-primary">📋 My Upcoming Appointments</h3>
 
-            @if (Model.MemberAppointments != null && Model.MemberAppointments.Any())
+            @if (Model != null && Model.Any())
             {
                 <div class="d-none d-md-block bg-white rounded-top fw-bold text-muted p-2 border-bottom">
                     <div class="d-flex w-100 justify-content-start align-items-center gap-4">
@@ -21,38 +19,29 @@
                         <span class="ms-auto" style="width: 80px;">Cancel</span>
                     </div>
                 </div>
+
                 <div class="list-group">
-                    @foreach (var appointment in Model.MemberAppointments)
+                    @foreach (var appointment in Model)
                     {
                         <div class="list-group-item list-group-item-action mb-2 rounded shadow-sm">
                             <div class="d-flex w-100 justify-content-between align-items-center flex-wrap">
-
                                 <div class="d-flex flex-wrap gap-4 align-items-center">
-
                                     <span class="text-dark fw-bold" style="width: 120px;">
                                         📅 @appointment.Date.ToString("dd MMM yyyy")
                                     </span>
-
                                     <span class="text-secondary" style="width: 70px;">
                                         ⏰ @appointment.Time.ToString(@"hh\:mm")
                                     </span>
 
-                                    
-                                        <span class="badge bg-success text-white">
-                                        👤 @(appointment.Coach.Id)
-                                        </span>
-                                       
-
+                                    <span class="badge bg-success text-white">
+                                        👤 @appointment.Coach.member.UserName
+                                    </span>
                                 </div>
 
-                                <form method="post" class="ms-auto"
+                                <form method="post" asp-action="CancelAppointment" class="ms-auto"
                                       onsubmit="return confirm('Are you sure you want to cancel this appointment on @appointment.Date.ToString("dd.MM.yyyy")?');">
-
                                     <input type="hidden" name="id" value="@appointment.Id" />
-
-                                    <button type="submit"
-                                            asp-page-handler="CancelAppointment"
-                                            class="btn btn-sm btn-outline-danger">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">
                                         ❌ Cancel
                                     </button>
                                 </form>

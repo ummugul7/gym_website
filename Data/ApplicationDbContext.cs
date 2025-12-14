@@ -30,9 +30,9 @@ namespace proje.Data
                 .HasOne(a => a.Coach)
                 .WithMany(c => c.Appointments)
                 .HasForeignKey(a => a.CoachId)
-                .OnDelete(DeleteBehavior.Restrict); // Koçu silerken randevuları silmeyi kısıtlar
+                .OnDelete(DeleteBehavior.Cascade);
 
-           
+
             builder.Entity<Appointment>()
                 .HasOne(a => a.Member)
                 .WithMany(m => m.Appointments)

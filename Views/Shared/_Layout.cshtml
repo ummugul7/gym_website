@@ -27,6 +27,13 @@
                             </li>
                         }
 
+                        @if (User.IsInRole("Member"))
+                        {
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-dark" asp-area="" asp-action="Myİnformation" asp-controller="Member" >My Appointment </a>
+                            </li>
+                            
+                        }
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item me-4">
