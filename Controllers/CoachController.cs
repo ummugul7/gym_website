@@ -65,10 +65,13 @@ namespace proje.Controllers
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
+                    TempData["Mesaj"] = "iptal .";
+                    return RedirectToAction("Index", "Home");
+
                 }
             }
 
-            return View(model);  
+            return View();  
         }
 
 

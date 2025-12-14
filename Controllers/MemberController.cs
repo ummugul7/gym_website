@@ -21,7 +21,14 @@ namespace proje.Controllers
         public IActionResult Myİnformation()
         {
             string memberId = User.FindFirst(ClaimTypes.NameIdentifier).Value; // anlık olarak sistemde login olan kişinin idsini gönderir 
-            var memberAppointmentList = dbContext.Appointment.Where(x=>x.MemberId == memberId && x.Date >= DateTime.Now).GroupBy(x => x.Date.Date).ToList();
+            var memberAppointmentList = dbContext.Appointment
+        .Include(x => x.Coach)
+        .ThenInclude(c => c.member)
+        .Where(x => x.MemberId == memberId && x.Date >= DateTime.Now)
+        .OrderBy(x => x.Date)
+        .ThenBy(x => x.Time)
+        .ToList();
+
             return View("PersonalData",memberAppointmentList);
         }
 

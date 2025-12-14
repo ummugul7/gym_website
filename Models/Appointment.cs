@@ -6,7 +6,9 @@
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
         public string? MemberId { get; set; }
+        public Member? Member { get; set; }
         public int CoachId { get; set; }
+        public Coach Coach { get; set; }
         public bool IsBooked { get; set; } = false;
     }
 

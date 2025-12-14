@@ -1,7 +1,8 @@
 ﻿@model proje.Models.CoachViewModel
 
+
 @{
-    ViewData["Title"] = "Edit Coach";
+    ViewData["Title"] = "Record";
 }
 
 <div class="d-flex justify-content-center align-items-center min-vh-100">
@@ -10,12 +11,12 @@
         <h3 class="text-center fw-semibold mb-3">
             Coach Register
         </h3>
-        <hr>
+        <hr />
 
-        <form asp-action="Edit" method="post">
+        <form asp-action="Record" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
 
-            <input type="hidden" asp-for="Id" />
+            
 
             <div class="mb-3">
                 <label asp-for="UserName" class="form-label small fw-semibold"></label>
@@ -48,14 +49,11 @@
             </div>
 
             <div class="text-center">
-               
-
-                <button type="submit" class="btn btn-primary btn-sm px-4">
-                    Save
-                </button>
+                <input type="submit" value="Save" class="btn btn-primary px-5" />
             </div>
         </form>
 
+    </div>
     </div>
 </div>
 
@@ -64,3 +62,8 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+
+
+              
+

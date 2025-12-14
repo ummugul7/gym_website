@@ -1,42 +1,112 @@
 ﻿@model IEnumerable<proje.Models.AppointmentGroupVM>
 
+@{
+    ViewData["Title"] = "Available Appointments";
+}
 
+<style>
+    /* ... (Mevcut stilleriniz) ... */
+    .appointment-time-btn:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+    /* Seçilen saati vurgulayan stil */
+    .btn-selected {
+        background-color: #28a745 !important;
+        color: white !important;
+        border-color: #28a745 !important;
+        font-weight: bold;
+    }
+</style>
 
-<h2>@TempData["Mesaj"]</h2>
+<div class="container my-5">
+    @if (TempData["Mesaj"] != null)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Bilgi:</strong> @TempData["Mesaj"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
 
-<h1>Appointment List</h1>
+    <h1 class="display-4 mb-4 fw-bold text-center">📅 Available Appointment Times</h1>
+    <p class="lead text-center text-secondary">Please select a date and a time slot to book your session.</p>
 
-<table class="table"> 
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Times</th>
-            <th>Select</th>
-        </tr>
-    </thead>
+    @if (Model != null && Model.Any())
+    {
+        <div class="row justify-content-center">
+            <div class="row">
+                @foreach (var day in Model.OrderBy(d => d.Date))
+                {
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm h-100" data-card-id="@day.Date.Date.Ticks">
+                            <div class="card-header bg-primary text-white">
+                                <h4 class="mb-0">
+                                    @day.Date.ToString("dd MMMM yyyy, dddd")
+                                </h4>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex flex-wrap align-items-center mb-3">
+                                    @if (day.Times.Any())
+                                    {
+                                        @foreach (var t in day.Times.OrderBy(t => t.Time))
+                                        {
+                                            <button type="button"
+                                                    data-appointment-id="@t.AppointmentId"
+                                                    data-card-id="@day.Date.Date.Ticks"
+                                                    class="btn btn-outline-success btn-sm m-1 appointment-time-btn">
+                                                @t.Time.ToString(@"hh\:mm")
+                                            </button>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p class="text-muted fst-italic">No available times for this date.</p>
+                                    }
+                                </div>
 
-    <tbody>
+                                <form id="form-@day.Date.Date.Ticks" asp-action="AppointmentBook" method="get" class="mt-auto">
+                                    <input type="hidden" name="id" id="selected-id-@day.Date.Date.Ticks" value="" />
+                                    <button type="submit"
+                                            id="btn-confirm-@day.Date.Date.Ticks"
+                                            class="btn btn-success w-100 fw-bold"
+                                            disabled>
+                                        CONFIRM APPOINTMENT
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
 
-        @foreach (var day in Model)
-        {
-            <tr>
-                <td>@day.Date.ToShortDateString()</td>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const timeButtons = document.querySelectorAll('.appointment-time-btn');
 
+            timeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const cardId = this.dataset.cardId;
+                    const appointmentId = this.dataset.appointmentId;
+                    const confirmButton = document.getElementById(`btn-confirm-${cardId}`);
+                    const selectedIdInput = document.getElementById(`selected-id-${cardId}`);
 
-                <td>
-                    @foreach (var t in day.Times)
-                    {
-                        <a asp-action="AppointmentBook"
-                           asp-route-id="@t.AppointmentId"
-                           class="btn btn-sm btn-success m-1">
-                            @t.Time.ToString(@"hh\:mm")
-                        </a>
-                    }
-                </td>
+                    // 1. Aynı karttaki tüm butonlardan seçili sınıfını kaldır
+                    const allButtonsInCard = document.querySelectorAll(`[data-card-id="${cardId}"]`);
+                    allButtonsInCard.forEach(btn => btn.classList.remove('btn-selected'));
 
-                
-            </tr>
-        }
+                    // 2. Tıklanan butona seçili sınıfını ekle
+                    this.classList.add('btn-selected');
 
-    </tbody>
-</table>
+                    // 3. Form alanını ve onay butonunu güncelle
+                    selectedIdInput.value = appointmentId;
+                    confirmButton.disabled = false;
+                });
+            });
+        });
+    </script>
+}
