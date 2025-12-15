@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/proje.styles.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+   
 </head>
-<body>
+<body background-image: url(images/pilates.jpg);>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -23,14 +26,18 @@
                         @if (!User.IsInRole("Admin"))
                         {
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="AppointmentSelectCoach">make an Appointment</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="AppointmentSelectCoach">Book an Appointment</a>
                             </li>
                         }
 
                         @if (User.IsInRole("Member"))
                         {
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-action="Myİnformation" asp-controller="Member" >My Appointment </a>
+                                <a class="nav-link text-dark" asp-area="" asp-action="MyAppointment" asp-controller="Member">My Appointment </a>
+                            </li>
+
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-dark" asp-area="" asp-action="MyInformation" asp-controller="Member">My Information </a>
                             </li>
                             
                         }
@@ -42,6 +49,9 @@
                             <li class="nav-item me-4">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Coach" asp-action="ListCoach">List Instructor</a>
                             </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="BookedListAppointment">List Appointment</a>
+                            </li>
                         }
                     </ul>
                     <partial name="_LoginPartial" />
@@ -50,12 +60,12 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="p-0">
             @RenderBody()
         </main>
     </div>
 
- <<!--  <footer class="border-top footer text-muted mt-5">
+ <!--  <footer class="border-top footer text-muted mt-5">
     <div class="container text-center py-3">
             <a class="text-decoration-none text-dark fs-4 fw-bold" asp-area="" asp-controller="Home" asp-action="Index">GYM</a>
     </div>

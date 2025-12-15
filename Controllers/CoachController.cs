@@ -118,8 +118,7 @@ namespace proje.Controllers
             {
                 var date = startDate.AddDays(day);
 
-                // Her gün için 9:00 - 18:00 arası saatlik slotlar
-                for (int hour = 9; hour <= 17; hour++)
+                for (int hour = 9; hour <= 22; hour=hour+2)
                 {
                     appointments.Add(new Appointment
                     {
@@ -174,7 +173,8 @@ namespace proje.Controllers
         }
 
 
+        
+        
 
-       
     }
 }

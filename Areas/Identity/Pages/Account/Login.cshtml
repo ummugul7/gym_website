@@ -9,7 +9,6 @@
     <div class="card shadow p-4" style="width: 380px; border-radius: 14px;">
 
         <h2 class="text-center mb-3">@ViewData["Title"]</h2>
-        <h6 class="text-center text-muted mb-3">Use your account to log in</h6>
         <hr />
 
         <section>
@@ -37,12 +36,6 @@
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input" asp-for="Input.RememberMe" />
-                    <label class="form-check-label" asp-for="Input.RememberMe">
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
 
                 <button id="login-submit" type="submit" class="btn btn-primary w-100 py-2">
                     Log in

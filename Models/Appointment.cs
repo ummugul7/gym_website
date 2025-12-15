@@ -10,6 +10,8 @@
         public int CoachId { get; set; }
         public Coach Coach { get; set; }
         public bool IsBooked { get; set; } = false;
+        public bool IsConfirmed { get; set; } = true;
+        public int price { get; set; }
     }
 
     public class AppointmentGroupVM

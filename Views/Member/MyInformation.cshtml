@@ -1,0 +1,85 @@
+﻿@model proje.Models.Member
+
+@{
+    ViewData["Title"] = "Member Information";
+}
+
+<style>
+    .info-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .info-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+    .info-label {
+        color: #666;
+        font-weight: 500;
+    }
+
+    .info-value {
+        color: #333;
+    }
+
+    .btn-edit {
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 3px;
+        margin-top: 24px;
+        width: 100%;
+        transition: background-color 0.2s ease;
+    }
+
+        .btn-edit:hover {
+            background-color: #1565c0;
+        }
+</style>
+
+<div class="container my-5">
+    <div class="info-card">
+        <h1 class="info-title">Member Information</h1>
+
+        <div class="info-row">
+            <span class="info-label">Username</span>
+            <span class="info-value">@Model.Email</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-label">Weight</span>
+            <span class="info-value">@Model.weight kg</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-label">Height</span>
+            <span class="info-value">@Model.length cm</span>
+        </div>
+
+        <a asp-action="MemberEdit" asp-controller="Member" class="btn-edit text-center text-decoration-none d-block">
+            Edit My Information
+        </a>
+    </div>
+</div>

@@ -1,5 +1,7 @@
+wwwroot\css\gym.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\pilates.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -123,3 +125,4 @@ C:\Users\RDS\Desktop\proje\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\RDS\Desktop\proje\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\RDS\Desktop\proje\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\RDS\Desktop\proje\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\RDS\Desktop\proje\wwwroot\css\gym.css

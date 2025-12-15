@@ -5,31 +5,107 @@
 }
 
 <style>
-    /* ... (Mevcut stilleriniz) ... */
-    .appointment-time-btn:hover {
-        transform: scale(1.05);
-        transition: transform 0.2s ease-in-out;
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 15px;
     }
-    /* Seçilen saati vurgulayan stil */
+
+    .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+    }
+
+    .card-header {
+        background-color: #583a0e;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 4px 4px 0 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .appointment-time-btn {
+        font-size: 10px;
+        padding: 6px 14px;
+        border: 1px solid #d0d0d0;
+        background-color: white;
+        color: #333;
+        border-radius: 3px;
+        transition: all 0.2s ease;
+        margin: 4px;
+    }
+
+        .appointment-time-btn:hover {
+            background-color: #e3f2fd;
+            border-color: #90caf9;
+            color: #1976d2;
+        }
+
+    .btn-confirm {
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+    }
+
+        .btn-confirm:hover:not(:disabled) {
+            background-color: #1565c0;
+        }
+
+        .btn-confirm:disabled {
+            background-color: #e0e0e0;
+            color: #9e9e9e;
+            cursor: not-allowed;
+        }
+
     .btn-selected {
-        background-color: #28a745 !important;
+        background-color: #76622d ;
         color: white !important;
-        border-color: #28a745 !important;
-        font-weight: bold;
+        border-color: #76622d;
+        font-weight: 500;
+    }
+
+    .page-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .no-times-text {
+        color: #999;
+        font-size: 13px;
+        font-style: italic;
+    }
+
+    .alert {
+        font-size: 14px;
+        border-radius: 4px;
     }
 </style>
 
 <div class="container my-5">
-    @if (TempData["Mesaj"] != null)
+  
+    <h1 class="page-title text-center">Available Appointments</h1>
+  <hr />
+    @if (TempData["Msjbook"] != null)
     {
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-            <strong>Bilgi:</strong> @TempData["Mesaj"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        <p>@TempData["Msjbook"]</p>
     }
-
-    <h1 class="display-4 mb-4 fw-bold text-center">📅 Available Appointment Times</h1>
-    <p class="lead text-center text-secondary">Please select a date and a time slot to book your session.</p>
 
     @if (Model != null && Model.Any())
     {
@@ -38,11 +114,9 @@
                 @foreach (var day in Model.OrderBy(d => d.Date))
                 {
                     <div class="col-md-6 mb-4">
-                        <div class="card shadow-sm h-100" data-card-id="@day.Date.Date.Ticks">
-                            <div class="card-header bg-primary text-white">
-                                <h4 class="mb-0">
-                                    @day.Date.ToString("dd MMMM yyyy, dddd")
-                                </h4>
+                        <div class="card" data-card-id="@day.Date.Date.Ticks">
+                            <div class="card-header">
+                                @day.Date.ToString("MMMM dd, yyyy - dddd", new System.Globalization.CultureInfo("en-US"))
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <div class="d-flex flex-wrap align-items-center mb-3">
@@ -60,7 +134,7 @@
                                     }
                                     else
                                     {
-                                        <p class="text-muted fst-italic">No available times for this date.</p>
+                                        <p class="no-times-text">No available times</p>
                                     }
                                 </div>
 
@@ -68,7 +142,7 @@
                                     <input type="hidden" name="id" id="selected-id-@day.Date.Date.Ticks" value="" />
                                     <button type="submit"
                                             id="btn-confirm-@day.Date.Date.Ticks"
-                                            class="btn btn-success w-100 fw-bold"
+                                            class="btn-confirm w-100"
                                             disabled>
                                         CONFIRM APPOINTMENT
                                     </button>
@@ -95,14 +169,12 @@
                     const confirmButton = document.getElementById(`btn-confirm-${cardId}`);
                     const selectedIdInput = document.getElementById(`selected-id-${cardId}`);
 
-                    // 1. Aynı karttaki tüm butonlardan seçili sınıfını kaldır
-                    const allButtonsInCard = document.querySelectorAll(`[data-card-id="${cardId}"]`);
+                    const allButtonsInCard = document.querySelectorAll(`.appointment-time-btn[data-card-id="${cardId}"]`);
                     allButtonsInCard.forEach(btn => btn.classList.remove('btn-selected'));
 
-                    // 2. Tıklanan butona seçili sınıfını ekle
                     this.classList.add('btn-selected');
 
-                    // 3. Form alanını ve onay butonunu güncelle
+                    // Form alanını ve onay butonunu güncelle
                     selectedIdInput.value = appointmentId;
                     confirmButton.disabled = false;
                 });

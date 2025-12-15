@@ -189,7 +189,6 @@ C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\a3ygkwa5zy-2z0ns9nrw6.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\6emhaa56fq-b9sayid5wm.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\so1m743dki-61n19gt1b8.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\lxbynq9eql-xtxxf3hu2r.gz
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\u42har0xgw-bqjiyaj88i.gz
@@ -441,3 +440,5 @@ C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\proje.sourcelink.json
+C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\g1s7kwettr-3fo8r7dfm5.gz
+C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\6emhaa56fq-9jbh4m1637.gz

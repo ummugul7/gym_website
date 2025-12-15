@@ -1,10 +1,68 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Ana Sayfa";
 }
 
-<div class="text-center">
-   
-    @TempData["Mesaj"] 
-    
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/gym.css" asp-append-version="true" />
+    <style>
+        main {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container, .container-fluid {
+            padding: 0 ;
+            max-width: 100%;
+        }
+    </style>
+}
+
+<div class="gym-hero">
+    <div class="hero-background"></div>
+
+        <div class="hero-content">
+            <div class="row h-100 align-items-center g-0">
+                
+                <div class="col-lg-7 col-md-6">
+                    <div class="gym-info">
+                        <h2 class="display-3 fw-bold text-white mb-4">
+                                   WELCOME
+                        </h2>
+                        <div class="info-box">
+                            <h3 class="text-white mb-3"> Modern Equipment</h3>
+                            <p class="text-white mb-4">
+                                State-of-the-art fitness equipment and spacious workout areas to help you reach your goals.
+                            </p>
+
+                            <h3 class="text-white mb-3"> Professional Trainers</h3>
+                            <p class="text-white mb-4">
+                                Our expert coaches create personalized training programs just for you.
+                            </p>
+
+                            <h3 class="text-white mb-3"> Flexible Hours</h3>
+                            <p class="text-white mb-4">
+                                Weekdays: 06:00 - 23:00<br>
+                                Weekends: 08:00 - 22:00
+                            </p>
+
+                            <h3 class="text-white mb-3"> Group Classes</h3>
+                            <p class="text-white">
+                                Yoga, Pilates, Spinning, Zumba and more!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 text-center">
+                    <a asp-controller="Appointment" asp-action="AppointmentSelectCoach" class="btn-book-appointment">
+                        BOOK AN APPOINTMENT
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
-<a asp-action="Myİnformation" asp-controller="Member"> tıkla karrdesim </a>
+

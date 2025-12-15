@@ -46,7 +46,7 @@ namespace proje.Controllers
 
             return View(groupedAppointments);
         }
-
+         
       
        public async Task<IActionResult> AppointmentBook(int id)
         {
@@ -61,11 +61,11 @@ namespace proje.Controllers
          
 
             appointment.MemberId = userId;   // burada set ediyorsun
-            appointment.IsBooked = true;     // randevu dolu oldu
+            appointment.IsBooked = true;      // bu şimdilik çünkü aynı anda başkası da randevuyu almaya çalışmasın diye 
 
             await dbContext.SaveChangesAsync();
 
-            TempData["Mesaj"] = "Appointment successfull";
+            TempData["Msjbook"] = "Appointment request created";
 
             return RedirectToAction("AppointmentList", new { id = appointment.CoachId }); 
         }
@@ -73,6 +73,51 @@ namespace proje.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult BookedListAppointment()
+        {
+            var appointmentList=dbContext.Appointment.Where(x=>x.IsBooked==true)
+                .Include(x=>x.Coach)
+                .ThenInclude(c=>c.member)
+                .Include(x=>x.Member)
+                .OrderBy(x=>x.Date)
+                .ThenBy(x=>x.Time)
+                .ToList();
+            return View(appointmentList);
+        }
+
+        // detayda onaylama işlemi olacak
+        public IActionResult Details(int id)
+        {
+            var appointment = dbContext.Appointment.Find(id);
+            if(appointment != null)
+            {
+                appointment.IsConfirmed = false;  // confrim edildi anlamında artık yani 
+                appointment.IsBooked = true;
+                dbContext.SaveChanges();
+                TempData["Msj"] = "Appointment confirmed successfully.";
+            }
+            return RedirectToAction("BookedListAppointment");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var appointment = dbContext.Appointment.Find(id);
+            if (appointment != null)
+            {
+                appointment.IsBooked = false;
+                appointment.IsConfirmed = false;
+                appointment.MemberId = null;
+                dbContext.SaveChanges();
+                TempData["Msj"] = "Appointment cancelled successfully.";
+            }
+            return RedirectToAction("BookedListAppointment");
+        }
+
+        public IActionResult Edit()
+        {
+               return View();
         }
     }
 }

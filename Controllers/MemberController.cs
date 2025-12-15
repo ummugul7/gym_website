@@ -18,24 +18,15 @@ namespace proje.Controllers
             dbContext = context;
         }
 
-        /*    public IActionResult Myİnformation()
-           {
-               string memberId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        public IActionResult MyInformation()
+        {
+            string memberId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var member = dbContext.Users
+                .FirstOrDefault(m => m.Id == memberId);
+            return View("MyInformation", member);
+        }
 
-               var memberAppointmentList = dbContext.Appointment
-                   .Include(x => x.Coach)
-                       .ThenInclude(c => c.member)
-                   .Where(x => x.MemberId == memberId && x.Date >= DateTime.Now)
-                   .OrderBy(x => x.Date)
-                   .ThenBy(x => x.Time)
-                   .ToList();
-
-
-
-               return View();
-           } */
-
-        public IActionResult Myİnformation()
+        public IActionResult MyAppointment()
         {
             string memberId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
@@ -46,10 +37,7 @@ namespace proje.Controllers
                 .OrderBy(x => x.Date)
                 .ThenBy(x => x.Time)
                 .ToList();
-
-            // DEBUG
-
-            return View("Myİnformation", memberAppointmentList); // Yeni view adı
+            return View("MyAppointment", memberAppointmentList); 
         }
 
         [HttpPost]
@@ -61,11 +49,20 @@ namespace proje.Controllers
             {
                 appointment.IsBooked = false;
                 appointment.MemberId = null;
+                appointment.IsConfirmed = true;
                 await dbContext.SaveChangesAsync();
-                TempData["Mesaj"] = "Appointment cancelled successfully.";
+                TempData["Msj"] = "Appointment cancelled successfully.";
             }
-
-            return RedirectToAction("Myİnformation");
+            return RedirectToAction("MyAppointment");
         }
+
+
+        public IActionResult MemberEdit()
+        {
+
+            return View();
+        }
+
+
     }
 }

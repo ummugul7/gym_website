@@ -23,8 +23,8 @@
                 <td>@coach.speciality</td>
                 <td>@coach.experience years</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@coach.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@coach.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@coach.Id" class="btn btn-sm btn-primary">Edit</a> 
+                    <a asp-action="Delete" asp-route-id="@coach.Id" class="btn btn-sm btn-danger" >Delete</a>
                 </td>
             </tr>
         }
