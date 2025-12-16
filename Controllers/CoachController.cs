@@ -57,7 +57,7 @@ namespace proje.Controllers
                     CreateWeeklyAppointments(coach.Id);
 
                     TempData["Mesaj"] = "Eğitmen başarıyla kaydedildi.";
-                    return RedirectToAction("Index" ,"Home"); 
+                    return RedirectToAction("ListCoach"); 
                 }
                 else
                 {

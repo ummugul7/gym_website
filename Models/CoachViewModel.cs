@@ -27,5 +27,8 @@ namespace proje.Models
         [Required]
         [Display(Name = "experience ")]
         public int experience { get; set; }
+        [Required]
+        [Display(Name = "price")]
+        public int price { get; set; }
     }
 }

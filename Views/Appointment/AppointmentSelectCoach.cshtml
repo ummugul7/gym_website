@@ -70,6 +70,7 @@
             <tr>
                 <th>Username</th>
                 <th>Speciality</th>
+                <th>Price</th>
                 <th></th>
             </tr>
         </thead>
@@ -79,6 +80,7 @@
                 <tr>
                     <td>@coach.member.UserName</td>
                     <td>@coach.speciality</td>
+                    <td>$@coach.price</td>
                     <td>
                         <a asp-action="AppointmentList" asp-route-id="@coach.Id" class="btn-select">
                             Select

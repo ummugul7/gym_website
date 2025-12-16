@@ -15,6 +15,7 @@ namespace proje.Models
 
         public Member member { get; set; }
 
+        public int price { get; set; }
         public ICollection<Appointment> Appointments { get; set; } 
     }
 }

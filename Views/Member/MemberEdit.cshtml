@@ -1,7 +1,97 @@
-﻿
+﻿@model proje.Models.Member
 @{
-    ViewData["Title"] = "MemberEdit";
+    ViewData["Title"] = "Edit Information";
 }
+<style>
+    .info-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 
-<h1>MemberEdit</h1>
+    .info-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        color: #666;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    .btn-save {
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 3px;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+        .btn-save:hover {
+            background-color: #1565c0;
+        }
+</style>
+
+<div class="container my-5">
+    <div class="info-card">
+        <h1 class="info-title">Edit My Information</h1>
+        @if (TempData["Error"] != null)
+        {
+            <p>@TempData["Error"]</p>
+        }
+
+        <form asp-action="MemberEdit" method="post">
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" asp-for="Email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" asp-for="weight" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Height (cm)</label>
+                <input type="number" asp-for="length" class="form-control" required />
+                <div class="password-section">
+                    <h3 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 15px;">Change Password </h3>
+
+                    <div class="form-group">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" id="currentPassword" name="currentPassword" class="form-control" placeholder="Leave empty if you don't want to change" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">New Password</label>
+                        <input type="password" id="newPassword" name="newPassword" class="form-control" placeholder="Leave empty if you don't want to change" />
+                    </div>
+                </div>
+            <button type="submit" class="btn-save">Save Changes</button>
+        </form>
+    </div>
+</div>

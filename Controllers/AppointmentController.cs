@@ -8,6 +8,7 @@ using System.Security.Claims;
 
 namespace proje.Controllers
 {
+   
     public class AppointmentController : Controller
     {
         private readonly ApplicationDbContext dbContext;
@@ -93,7 +94,7 @@ namespace proje.Controllers
             var appointment = dbContext.Appointment.Find(id);
             if(appointment != null)
             {
-                appointment.IsConfirmed = false;  // confrim edildi anlamında artık yani 
+                appointment.IsConfirmed = true;  // confrim edildi anlamında artık yani 
                 appointment.IsBooked = true;
                 dbContext.SaveChanges();
                 TempData["Msj"] = "Appointment confirmed successfully.";
