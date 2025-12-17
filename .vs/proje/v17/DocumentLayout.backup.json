@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\RDS\\Desktop\\proje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\member\\listmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\member\\listmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\member\\listmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\member\\listmembers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 244,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ListMembers.cshtml",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Member\\ListMembers.cshtml",
               "RelativeDocumentMoniker": "Views\\Member\\ListMembers.cshtml",
@@ -39,13 +39,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MemberController.cs",
               "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "Controllers\\MemberController.cs",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\MemberController.cs",
               "RelativeToolTip": "Controllers\\MemberController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAuwIoAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAuwJ4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T17:48:52.513Z",
               "EditorCaption": ""
