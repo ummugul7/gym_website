@@ -11,6 +11,7 @@
             <th>Username</th>
             <th>Speciality</th>
             <th>Experience</th>
+            <th>Price </th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -22,6 +23,7 @@
                 <td>@coach.member.UserName</td>
                 <td>@coach.speciality</td>
                 <td>@coach.experience years</td>
+                <td>$@coach.price</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@coach.Id" class="btn btn-sm btn-primary">Edit</a> 
                     <a asp-action="Delete" asp-route-id="@coach.Id" class="btn btn-sm btn-danger" >Delete</a>

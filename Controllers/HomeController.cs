@@ -17,7 +17,6 @@ namespace proje.Controllers
 
         public IActionResult Index()
         {
-           
             return View();
         }
 

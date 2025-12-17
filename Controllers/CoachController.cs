@@ -100,12 +100,11 @@ namespace proje.Controllers
                     await UserManager.DeleteAsync(member);
                     TempData["Mesaj"] = "Coach successfully deleted.";
                 }
-              
             }else
             {
                 TempData["Mesaj"] = "something it's wrong try again .";
             }
-                
+            
             return RedirectToAction("ListCoach");
         }
 
@@ -130,7 +129,6 @@ namespace proje.Controllers
                     });
                 }
             }
-
             dbContext.Appointment.AddRange(appointments);
             dbContext.SaveChanges();
         }
@@ -163,6 +161,7 @@ namespace proje.Controllers
 
             coach.speciality = coachView.speciality;
             coach.experience = coachView.experience;
+            coach.price = coachView.price;
 
             coach.member.UserName = coachView.UserName;
             coach.member.Email = coachView.Email;

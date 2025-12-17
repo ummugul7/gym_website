@@ -39,7 +39,9 @@
                             <li class="nav-item me-4">
                                 <a class="nav-link text-dark" asp-area="" asp-action="MyInformation" asp-controller="Member">My Information </a>
                             </li>
-                            
+                            <li class="nav-item me-4">
+                                <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Ai">What do you suggest me? </a>
+                            </li>
                         }
                         @if (User.IsInRole("Admin"))
                         {
@@ -53,7 +55,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="BookedListAppointment">List Appointment</a>
                             </li>
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Member" asp-action="ListMembers">List Appointment</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Member" asp-action="ListMembers">List Member</a>
                             </li>
                         }
                     </ul>
