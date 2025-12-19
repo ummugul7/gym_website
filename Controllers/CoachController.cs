@@ -48,15 +48,14 @@ namespace proje.Controllers
                     {
                         UserId = user.Id,
                         speciality = model.speciality,
-                        experience = model.experience
+                        experience = model.experience,
+                        price = model.price
                     };
 
                     dbContext.Coach.Add(coach);
                     await dbContext.SaveChangesAsync();
 
-                    CreateWeeklyAppointments(coach.Id);
-
-                    TempData["Mesaj"] = "Eğitmen başarıyla kaydedildi.";
+                    TempData["Mesaj"] = "Coach successfully recorded.";
                     return RedirectToAction("ListCoach"); 
                 }
                 else
@@ -65,7 +64,7 @@ namespace proje.Controllers
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
-                    TempData["Mesaj"] = "iptal .";
+                    TempData["Mesaj"] = "something it's wrong try again .";
                     return RedirectToAction("Index", "Home");
 
                 }
@@ -79,6 +78,7 @@ namespace proje.Controllers
         {
             var coaches = dbContext.Coach
           .Include(c => c.member)
+          .Include(c => c.Appointments.Where(a => a.IsBooked == true && a.IsConfirmed==true))
           .ToList();
 
             return View(coaches);
@@ -108,35 +108,30 @@ namespace proje.Controllers
             return RedirectToAction("ListCoach");
         }
 
-        private void CreateWeeklyAppointments(int coachId)
-        {
-            var startDate = DateTime.Today;
-            var appointments = new List<Appointment>();
 
-            for (int day = 0; day < 7; day++)
-            {
-                var date = startDate.AddDays(day);
-
-                for (int hour = 9; hour <= 22; hour=hour+2)
-                {
-                    appointments.Add(new Appointment
-                    {
-                        Date = date,
-                        Time = new TimeSpan(hour, 0, 0),
-                        CoachId = coachId,
-                        IsBooked = false,
-                        MemberId = null
-                    });
-                }
-            }
-            dbContext.Appointment.AddRange(appointments);
-            dbContext.SaveChanges();
-        }
-
+        [HttpGet]
         public IActionResult Edit(int id)
         {
-            TempData["id"] = id;
-            return View();
+            var coach = dbContext.Coach
+                .Include(c => c.member)
+                .FirstOrDefault(c => c.Id == id);
+
+            if (coach == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new CoachViewModel
+            {
+                Id = coach.Id,
+                UserName = coach.member.UserName,
+                Email = coach.member.Email,
+                speciality = coach.speciality,
+                experience = coach.experience,
+                price = coach.price
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]

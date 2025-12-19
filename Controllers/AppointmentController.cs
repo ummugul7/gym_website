@@ -48,8 +48,67 @@ namespace proje.Controllers
             return View(groupedAppointments);
         }
          
-      
-       public async Task<IActionResult> AppointmentBook(int id)
+        public IActionResult CreateAppointments()
+        {
+            var coaches = dbContext.Coach
+         .Include(c => c.member)
+         .ToList();
+
+            return View(coaches);
+        }
+
+        [HttpPost]
+        public IActionResult GenerateRange(int coachId, DateTime startDate, DateTime endDate)
+        {
+            if (endDate < startDate)
+            {
+                TempData["Hata"] = "Bitiş tarihi başlangıç tarihinden önce olamaz.";
+                return RedirectToAction("ListCoach");
+            }
+
+            var appointments = new List<Appointment>();
+
+            for (DateTime date = startDate.Date; date <= endDate.Date; date = date.AddDays(1))
+            {
+                for (int hour = 9; hour <= 21; hour += 2)
+                {
+                    var timeSlot = new TimeSpan(hour, 0, 0);
+
+                    bool exists = dbContext.Appointment.Any(a =>
+                        a.CoachId == coachId &&
+                        a.Date.Date == date &&
+                        a.Time == timeSlot);
+
+                    if (!exists)
+                    {
+                        appointments.Add(new Appointment
+                        {
+                            Date = date,
+                            Time = timeSlot,
+                            CoachId = coachId,
+                            IsBooked = false,
+                            IsConfirmed=false,
+                            MemberId = null
+                        });
+                    }
+                }
+            }
+
+            if (appointments.Any())
+            {
+                dbContext.Appointment.AddRange(appointments);
+                dbContext.SaveChanges();
+                TempData["Mesaj"] = $"{appointments.Count} new appointment successfully created";
+            }
+            else
+            {
+                TempData["Mesaj"] = "error ! selected time full.";
+            }
+
+            return RedirectToAction("CreateAppointments");
+        }
+
+        public async Task<IActionResult> AppointmentBook(int id)
         {
             string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var appointment = await dbContext.Appointment.FindAsync(id);
@@ -78,7 +137,7 @@ namespace proje.Controllers
 
         public IActionResult BookedListAppointment()
         {
-            var appointmentList=dbContext.Appointment.Where(x=>x.IsBooked==true)
+            var appointmentList=dbContext.Appointment.Where(x=>x.IsBooked==true && x.Date>=DateTime.Now) //burda tarihi geçmiş randevuları göstermiyor
                 .Include(x=>x.Coach)
                 .ThenInclude(c=>c.member)
                 .Include(x=>x.Member)

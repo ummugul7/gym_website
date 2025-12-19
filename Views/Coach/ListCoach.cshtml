@@ -2,7 +2,9 @@
 
 <h3>@TempData["Mesaj"]</h3>
 <h2>Coach List</h2>
-
+@{
+    int grandTotal = 0;
+}
 
 <table class="table">
     <thead>
@@ -12,23 +14,34 @@
             <th>Speciality</th>
             <th>Experience</th>
             <th>Price </th>
+            <th>app. count </th>
+            <th>Coach Total</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var coach in Model)
         {
+            int coachEarnings = coach.price * coach.Appointments.Count;
+            grandTotal += coachEarnings;
             <tr>
                 <td>@coach.member.Email</td>
                 <td>@coach.member.UserName</td>
                 <td>@coach.speciality</td>
                 <td>@coach.experience years</td>
                 <td>$@coach.price</td>
+                <td>@coach.Appointments.Count</td>
+                <td>$@coachEarnings</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@coach.Id" class="btn btn-sm btn-primary">Edit</a> 
                     <a asp-action="Delete" asp-route-id="@coach.Id" class="btn btn-sm btn-danger" >Delete</a>
                 </td>
             </tr>
+           
         }
     </tbody>
 </table>
+
+<div>
+    <p>total earnings:  @grandTotal</p>
+</div>

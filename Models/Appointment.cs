@@ -10,7 +10,7 @@
         public int CoachId { get; set; }
         public Coach Coach { get; set; }
         public bool IsBooked { get; set; } = false;
-        public bool IsConfirmed { get; set; } =false;
+        public bool IsConfirmed { get; set; } =false; //false onaylamadı true onayladı
     }
 
     public class AppointmentGroupVM

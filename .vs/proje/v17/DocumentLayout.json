@@ -7,28 +7,12 @@
       "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\ai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\ai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\coachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\views\\coach\\record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:views\\coach\\record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|c:\\users\\rds\\desktop\\proje\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58E8E96-A622-49A3-9F28-806FFA2CE550}|proje.csproj|solutionrelative:controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,87 +32,35 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAgwEIAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T16:45:55.631Z",
+              "WhenOpened": "2025-12-19T15:28:32.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-17T16:43:42.86Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Ai\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Ai\\Index.cshtml",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Ai\\Index.cshtml",
+              "RelativeToolTip": "Views\\Ai\\Index.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T15:16:15.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T16:34:52.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Models\\Member.cs",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Models\\Member.cs",
-              "RelativeToolTip": "Models\\Member.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "AiController.cs",
+              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\AiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AiController.cs",
+              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\AiController.cs",
+              "RelativeToolTip": "Controllers\\AiController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T16:18:41.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Record.cshtml",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Coach\\Record.cshtml",
-              "RelativeDocumentMoniker": "Views\\Coach\\Record.cshtml",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Views\\Coach\\Record.cshtml",
-              "RelativeToolTip": "Views\\Coach\\Record.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T16:14:29.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CoachController.cs",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CoachController.cs",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\CoachController.cs",
-              "RelativeToolTip": "Controllers\\CoachController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAcwIIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T15:01:40.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\RDS\\Desktop\\proje\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T15:01:34.717Z",
+              "WhenOpened": "2025-12-19T15:15:17.324Z",
               "EditorCaption": ""
             }
           ]
