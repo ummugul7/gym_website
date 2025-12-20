@@ -9,12 +9,11 @@
         <div class="card shadow-sm border-0 rounded-4 p-4" style="width: 100%; max-width: 550px;">
 
             <h3 class="text-center fw-bold mb-3 text-dark">
-                <i class="bi bi-cpu"></i> AI Fitness Assistant
+                 AI Fitness Assistant
             </h3>
-            <p class="text-center text-muted small">Enter your details to generate a custom fitness and diet plan.</p>
             <hr />
 
-            <form asp-action="GetSuggestion" method="post">
+            <form asp-action="GetSuggestion" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
 
                 <div class="row">
@@ -48,7 +47,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Güncel Form Fotoğrafınız</label>
+                    <label class="form-label">Current Form Photo</label>
                     <input type="file" asp-for="Photo" class="form-control" accept="image/*">
                 </div>
 
@@ -60,25 +59,30 @@
             </form>
         </div>
     </div>
+    <div class="mt-2 ai-content" style="line-height: 1.7; color: #333; overflow-wrap: break-word; word-wrap: break-word;">
+      
+        @if (ViewBag.AiResponse != null)
+        {
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10 col-lg-8 card shadow-lg border-0 rounded-4 p-4" style="background-color: #ffffff;">
 
-    @if (ViewBag.AiResponse != null)
-    {
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-10 col-lg-8 card shadow-lg border-0 rounded-4 p-4" style="background-color: #ffffff;">
-                <h4 class="text-dark fw-bold border-bottom pb-3 mb-3">
-                    <i class="bi bi-stars text-warning"></i> Your Personalized Plan
-                </h4>
-                <div class="mt-2 ai-content" style="line-height: 1.7; color: #333;">
-                    @Html.Raw(ViewBag.AiResponse)
-                </div>
-                <div class="text-center mt-4">
-                    <button class="btn btn-outline-secondary btn-sm" onclick="window.print()">
-                        <i class="bi bi-printer"></i> Print Plan
-                    </button>
+                    <h4 class="text-dark fw-bold border-bottom pb-3 mb-3">
+                        <i class="bi bi-stars text-warning me-2"></i> Your Personalized Plan
+                    </h4>
+
+                    <div class="mt-2 ai-content" style="line-height: 1.8; color: #333; overflow-x: auto; word-wrap: break-word;">
+                        @Html.Raw(ViewBag.AiResponse)
+                    </div>
+
+                    <div class="text-center mt-4 no-print">
+                        <hr />
+                        <button class="btn btn-outline-secondary btn-sm" onclick="window.print()">
+                            <i class="bi bi-printer"></i> Print Plan
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
 </div>
 
 @section Scripts {

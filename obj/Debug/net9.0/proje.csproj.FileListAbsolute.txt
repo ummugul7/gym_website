@@ -440,7 +440,6 @@ C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\proje.sourcelink.json
-C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\g1s7kwettr-3fo8r7dfm5.gz
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\Json.More.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\JsonPointer.Net.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\JsonSchema.Net.dll
@@ -459,3 +458,4 @@ C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\RDS\Desktop\proje\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encodings.Web.dll
 C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\6emhaa56fq-cypmn1mifc.gz
+C:\Users\RDS\Desktop\proje\obj\Debug\net9.0\compressed\g1s7kwettr-jt62j6hbds.gz

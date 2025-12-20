@@ -21,7 +21,10 @@
                 <td>@member.weight</td>
                 <td>@member.length</td>
                 <td>
-                    <a asp-action="DeleteMember" asp-route-id="@member.Id" class="btn btn-sm btn-danger">Delete</a>
+                    <form asp-action="DeleteMember" asp-route-id="@member.Id" method="post" onsubmit="return confirm('Emin misiniz?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                 
                 </td>
             </tr>
         }

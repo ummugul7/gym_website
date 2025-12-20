@@ -135,14 +135,14 @@ namespace proje.Controllers
             var members = await userManager.GetUsersInRoleAsync("Member");
             return View(members);
         }
-
-        public async Task<IActionResult> DeleteMember(string  memberId)
+        [HttpPost]
+        public async Task<IActionResult> DeleteMember(string  Id)
         {
-            var member = dbContext.Users.FirstOrDefault(m => m.Id == memberId);
+            var member = dbContext.Users.FirstOrDefault(m => m.Id == Id);
             if (member != null)
             {
                 var appointments = dbContext.Appointment
-                    .Where(a => a.MemberId == memberId)
+                    .Where(a => a.MemberId == Id)
                     .ToList();
                 foreach (var appointment in appointments)
                 {

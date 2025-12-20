@@ -4,19 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - proje</title>
-    <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/proje.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     @await RenderSectionAsync("Styles", required: false)
-   
 </head>
-<body background-image: url(images/pilates.jpg);>
+<body >
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand fs-3 fw-bold" asp-area="" asp-controller="Home" asp-action="Index">GYM</a>
+                <a class="navbar-brand fs-3 fw-bold" asp-area="" asp-controller="Home" asp-action="Index">MAX GYM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,20 +28,19 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="AppointmentSelectCoach">Book an Appointment</a>
                             </li>
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Ai">What do you suggest me? </a>
+                                <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Ai">What do you suggest me?</a>
                             </li>
                         }
 
                         @if (User.IsInRole("Member"))
                         {
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-action="MyAppointment" asp-controller="Member">My Appointment </a>
+                                <a class="nav-link text-dark" asp-area="" asp-action="MyAppointment" asp-controller="Member">My Appointment</a>
                             </li>
 
                             <li class="nav-item me-4">
-                                <a class="nav-link text-dark" asp-area="" asp-action="MyInformation" asp-controller="Member">My Information </a>
+                                <a class="nav-link text-dark" asp-area="" asp-action="MyInformation" asp-controller="Member">My Information</a>
                             </li>
-                           
                         }
                         @if (User.IsInRole("Admin"))
                         {
