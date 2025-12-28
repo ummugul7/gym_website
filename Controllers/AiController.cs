@@ -9,7 +9,7 @@ namespace proje.Controllers
 {
     public class AiController : Controller
     {
-        private readonly string apiKey = "AIzaSyC2aWR0O_8eX8FyO1X4m4CbWRdY0Ftkm-Y"; 
+        private readonly string apiKey = "apikey; 
        
         public IActionResult Index()
         {
