@@ -25,4 +25,5 @@ Kimlik Doğrulama: ASP.NET Core Identity (Authorization & Authentication)
 
 Frontend: HTML5, CSS3, Bootstrap
 
-Veritabanı: Entity Framework Core
+Veritabanı: MSSQL
+
