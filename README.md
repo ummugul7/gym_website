@@ -1,7 +1,7 @@
 # Spor Salonu Yönetim Sistemi
 ASP.NET Core MVC mimarisi kullanılarak geliştirilmiş; üyelerin randevu alabildiği, adminlerin ise eğitmen, randevu ve üyeleri yönetebildiği web uygulaması.
 
-##Özellikler
+# Özellikler
 Üye (Kullanıcı) Paneli
 
 Giriş & Kayıt: ASP.NET Core Identity altyapısı ile güvenli üyelik sistemi.
